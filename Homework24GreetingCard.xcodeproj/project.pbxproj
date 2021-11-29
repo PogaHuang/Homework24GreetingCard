@@ -13,6 +13,7 @@
 		D67CE94A27545DAD00C3FDF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D67CE94827545DAD00C3FDF9 /* Main.storyboard */; };
 		D67CE94C27545DB300C3FDF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D67CE94B27545DB300C3FDF9 /* Assets.xcassets */; };
 		D67CE94F27545DB300C3FDF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D67CE94D27545DB300C3FDF9 /* LaunchScreen.storyboard */; };
+		D67CE9572754605A00C3FDF9 /* HanyiSentyPailouArch.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D67CE9562754605A00C3FDF9 /* HanyiSentyPailouArch.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		D67CE94B27545DB300C3FDF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D67CE94E27545DB300C3FDF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D67CE95027545DB300C3FDF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D67CE9562754605A00C3FDF9 /* HanyiSentyPailouArch.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HanyiSentyPailouArch.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				D67CE94B27545DB300C3FDF9 /* Assets.xcassets */,
 				D67CE94D27545DB300C3FDF9 /* LaunchScreen.storyboard */,
 				D67CE95027545DB300C3FDF9 /* Info.plist */,
+				D67CE9562754605A00C3FDF9 /* HanyiSentyPailouArch.ttf */,
 			);
 			path = Homework24GreetingCard;
 			sourceTree = "<group>";
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D67CE9572754605A00C3FDF9 /* HanyiSentyPailouArch.ttf in Resources */,
 				D67CE94F27545DB300C3FDF9 /* LaunchScreen.storyboard in Resources */,
 				D67CE94C27545DB300C3FDF9 /* Assets.xcassets in Resources */,
 				D67CE94A27545DAD00C3FDF9 /* Main.storyboard in Resources */,

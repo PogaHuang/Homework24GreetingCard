@@ -1,24 +1,637 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HanyiSentyPailouArch.ttf">
+            <string>HanyiSentyPailouArch</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Homework24GreetingCard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cork-339" translatesAutoresizingMaskIntoConstraints="NO" id="luj-AK-h3o">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xg2-BQ-fTf">
+                                <rect key="frame" x="20" y="44" width="374" height="390"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBq-2R-z4N">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="390"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" id="eQo-BT-8Rh">
+                                                <rect key="frame" x="0.0" y="0.0" width="1122" height="390"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <view opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="1Il-J1-ijm">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="390"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="樣式：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUe-86-s8y">
+                                                                <rect key="frame" x="8" y="24" width="74" height="33"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" name="HanyiSentyPailouArch" family="HanyiSentyPailouArch" pointSize="25"/>
+                                                                <color key="textColor" red="0.52669697999999998" green="0.40229982139999998" blue="0.35759082440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hix-wu-8wS">
+                                                                <rect key="frame" x="90" y="26" width="276" height="32"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <segments>
+                                                                    <segment title="生日卡"/>
+                                                                    <segment title="情人節"/>
+                                                                    <segment title="聖誕節"/>
+                                                                </segments>
+                                                                <connections>
+                                                                    <action selector="changeGreetingCardStyle:" destination="BYZ-38-t0r" eventType="valueChanged" id="sYp-jO-dus"/>
+                                                                </connections>
+                                                            </segmentedControl>
+                                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="輸入賀卡標題" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="JAC-iz-Nbf">
+                                                                <rect key="frame" x="8" y="116" width="276" height="34"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="showWordsCount:" destination="BYZ-38-t0r" eventType="editingChanged" id="2Ob-4g-5ce"/>
+                                                                </connections>
+                                                            </textField>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0字" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdu-tQ-HK8">
+                                                                <rect key="frame" x="292" y="116" width="74" height="33"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" name="HanyiSentyPailouArch" family="HanyiSentyPailouArch" pointSize="20"/>
+                                                                <color key="textColor" red="0.52669697999999998" green="0.40229982139999998" blue="0.35759082440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="輸入賀卡內容" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qGi-fB-GsH">
+                                                                <rect key="frame" x="8" y="199" width="276" height="34"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="showWordsCount:" destination="BYZ-38-t0r" eventType="editingChanged" id="tCR-4K-iNE"/>
+                                                                </connections>
+                                                            </textField>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0字" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nsb-rL-WGd">
+                                                                <rect key="frame" x="292" y="200" width="74" height="33"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" name="HanyiSentyPailouArch" family="HanyiSentyPailouArch" pointSize="20"/>
+                                                                <color key="textColor" red="0.52669697999999998" green="0.40229982139999998" blue="0.35759082440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="25" minValue="25" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="a0S-GV-Isl">
+                                                                <rect key="frame" x="88" y="158" width="198" height="30"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="minimumTrackTintColor" red="0.52669697999999998" green="0.40229982139999998" blue="0.35759082440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <connections>
+                                                                    <action selector="changeFontSize:" destination="BYZ-38-t0r" eventType="valueChanged" id="awn-OT-e79"/>
+                                                                </connections>
+                                                            </slider>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="25級" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SAq-6x-Sp1">
+                                                                <rect key="frame" x="292" y="156" width="74" height="33"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" name="HanyiSentyPailouArch" family="HanyiSentyPailouArch" pointSize="20"/>
+                                                                <color key="textColor" red="0.52669697999999998" green="0.40229982139999998" blue="0.35759082440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="字體大小" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bM-kb-zbG">
+                                                                <rect key="frame" x="8" y="158" width="74" height="33"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" name="HanyiSentyPailouArch" family="HanyiSentyPailouArch" pointSize="17"/>
+                                                                <color key="textColor" red="0.52669697999999998" green="0.40229982139999998" blue="0.35759082440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="字體大小" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e76-R1-md9">
+                                                                <rect key="frame" x="8" y="241" width="74" height="33"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" name="HanyiSentyPailouArch" family="HanyiSentyPailouArch" pointSize="17"/>
+                                                                <color key="textColor" red="0.52669697999999998" green="0.40229982139999998" blue="0.35759082440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <slider opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="17" minValue="17" maxValue="35" translatesAutoresizingMaskIntoConstraints="NO" id="ckP-nj-Y1O">
+                                                                <rect key="frame" x="88" y="241" width="198" height="30"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="minimumTrackTintColor" red="0.52669697999999998" green="0.40229982139999998" blue="0.35759082440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <connections>
+                                                                    <action selector="changeFontSize:" destination="BYZ-38-t0r" eventType="valueChanged" id="37J-w7-xtl"/>
+                                                                </connections>
+                                                            </slider>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="17級" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XlG-5d-cmU">
+                                                                <rect key="frame" x="292" y="241" width="74" height="33"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" name="HanyiSentyPailouArch" family="HanyiSentyPailouArch" pointSize="20"/>
+                                                                <color key="textColor" red="0.52669697999999998" green="0.40229982139999998" blue="0.35759082440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLb-7A-GIm">
+                                                                <rect key="frame" x="193" y="312" width="173" height="70"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="套用" cornerStyle="large">
+                                                                    <backgroundConfiguration key="background">
+                                                                        <color key="backgroundColor" red="0.52669697999999998" green="0.40229982139999998" blue="0.35759082440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </backgroundConfiguration>
+                                                                    <fontDescription key="titleFontDescription" name="HanyiSentyPailouArch" family="HanyiSentyPailouArch" pointSize="25"/>
+                                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="setGreetCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mLp-TS-M8x"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKw-Vj-mtP">
+                                                                <rect key="frame" x="8" y="312" width="173" height="70"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="重設" cornerStyle="large">
+                                                                    <backgroundConfiguration key="background">
+                                                                        <color key="backgroundColor" red="0.52669697999999998" green="0.40229982139999998" blue="0.35759082440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </backgroundConfiguration>
+                                                                    <fontDescription key="titleFontDescription" name="HanyiSentyPailouArch" family="HanyiSentyPailouArch" pointSize="25"/>
+                                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="resetGreetingCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4u1-aF-avp"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <gestureRecognizers/>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="xSJ-La-jf8" appends="YES" id="dQt-vq-yBQ"/>
+                                                        </connections>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K4E-HT-Dyw">
+                                                        <rect key="frame" x="374" y="0.0" width="374" height="390"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7WP-6T-7fF">
+                                                                <rect key="frame" x="0.0" y="57" width="366" height="87"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="圓角" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ta3-78-QyD">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="83" height="46"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <fontDescription key="fontDescription" name="HanyiSentyPailouArch" family="HanyiSentyPailouArch" pointSize="20"/>
+                                                                        <color key="textColor" red="0.52669697999999998" green="0.40229982139999998" blue="0.35759082440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xut-GF-l2j">
+                                                                        <rect key="frame" x="8" y="48" width="49" height="31"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <color key="onTintColor" red="0.52669697999999998" green="0.40229982139999998" blue="0.35759082440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <color key="thumbTintColor" red="0.69522255659999999" green="0.58923500780000004" blue="0.50607365370000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <connections>
+                                                                            <action selector="appearanceSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="QAw-UY-JlR"/>
+                                                                        </connections>
+                                                                    </switch>
+                                                                    <slider opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="gyL-kD-h8X">
+                                                                        <rect key="frame" x="81" y="48" width="205" height="30"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <color key="minimumTrackTintColor" red="0.52669697999999998" green="0.40229982139999998" blue="0.35759082440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <color key="thumbTintColor" red="0.69522255659999999" green="0.58923500780000004" blue="0.50607365370000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <connections>
+                                                                            <action selector="setGreetingCardAppearance:" destination="BYZ-38-t0r" eventType="valueChanged" id="uHm-NT-c8t"/>
+                                                                        </connections>
+                                                                    </slider>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHs-U7-ZxP">
+                                                                        <rect key="frame" x="292" y="48" width="74" height="31"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <fontDescription key="fontDescription" name="HanyiSentyPailouArch" family="HanyiSentyPailouArch" pointSize="20"/>
+                                                                        <color key="textColor" red="0.52669697999999998" green="0.40229982139999998" blue="0.35759082440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qub-fx-myf">
+                                                                <rect key="frame" x="4" y="152" width="366" height="87"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <subviews>
+                                                                    <switch opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Unq-zg-NGe">
+                                                                        <rect key="frame" x="8" y="48" width="49" height="31"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <color key="onTintColor" red="0.52669697999999998" green="0.40229982139999998" blue="0.35759082440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <color key="thumbTintColor" red="0.69522255659999999" green="0.58923500780000004" blue="0.50607365370000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <connections>
+                                                                            <action selector="appearanceSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="Arg-zk-xP4"/>
+                                                                        </connections>
+                                                                    </switch>
+                                                                    <slider opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="eQb-Kp-5Pw">
+                                                                        <rect key="frame" x="81" y="48" width="205" height="30"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <color key="minimumTrackTintColor" red="0.52669697999999998" green="0.40229982139999998" blue="0.35759082440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <color key="thumbTintColor" red="0.69522255659999999" green="0.58923500780000004" blue="0.50607365370000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <connections>
+                                                                            <action selector="setGreetingCardAppearance:" destination="BYZ-38-t0r" eventType="valueChanged" id="az5-jR-Lf6"/>
+                                                                        </connections>
+                                                                    </slider>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K0i-dh-vXH">
+                                                                        <rect key="frame" x="292" y="48" width="74" height="31"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <fontDescription key="fontDescription" name="HanyiSentyPailouArch" family="HanyiSentyPailouArch" pointSize="20"/>
+                                                                        <color key="textColor" red="0.52669697999999998" green="0.40229982139999998" blue="0.35759082440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="邊框" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MtU-Ya-Qnt">
+                                                                        <rect key="frame" x="-10" y="0.0" width="83" height="46"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <fontDescription key="fontDescription" name="HanyiSentyPailouArch" family="HanyiSentyPailouArch" pointSize="20"/>
+                                                                        <color key="textColor" red="0.52669697999999998" green="0.40229982139999998" blue="0.35759082440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </view>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aC8-5U-7ur">
+                                                        <rect key="frame" x="748" y="0.0" width="374" height="390"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mdE-wh-VHg">
+                                                                <rect key="frame" x="0.0" y="0.0" width="374" height="87"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="紅" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P1q-3N-0N4">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="83" height="46"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <fontDescription key="fontDescription" name="HanyiSentyPailouArch" family="HanyiSentyPailouArch" pointSize="20"/>
+                                                                        <color key="textColor" red="0.52669697999999998" green="0.40229982139999998" blue="0.35759082440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <switch opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BHH-PJ-5G6">
+                                                                        <rect key="frame" x="8" y="48" width="49" height="31"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <color key="onTintColor" red="0.52669697999999998" green="0.40229982139999998" blue="0.35759082440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <color key="thumbTintColor" red="0.69522255659999999" green="0.58923500780000004" blue="0.50607365370000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <connections>
+                                                                            <action selector="colorSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="jaL-ti-LMW"/>
+                                                                        </connections>
+                                                                    </switch>
+                                                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="SlB-mq-DVN">
+                                                                        <rect key="frame" x="81" y="48" width="205" height="30"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <color key="minimumTrackTintColor" systemColor="systemRedColor"/>
+                                                                        <color key="thumbTintColor" systemColor="systemRedColor"/>
+                                                                        <connections>
+                                                                            <action selector="changeCardBackgrounColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="CnW-r2-sv6"/>
+                                                                        </connections>
+                                                                    </slider>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oeh-PZ-R4p">
+                                                                        <rect key="frame" x="292" y="48" width="74" height="31"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <fontDescription key="fontDescription" name="HanyiSentyPailouArch" family="HanyiSentyPailouArch" pointSize="20"/>
+                                                                        <color key="textColor" red="0.52669697999999998" green="0.40229982139999998" blue="0.35759082440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nby-YR-syW">
+                                                                <rect key="frame" x="0.0" y="87" width="374" height="87"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="綠" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12K-YU-aEJ">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="83" height="46"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <fontDescription key="fontDescription" name="HanyiSentyPailouArch" family="HanyiSentyPailouArch" pointSize="20"/>
+                                                                        <color key="textColor" red="0.52669697999999998" green="0.40229982139999998" blue="0.35759082440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <switch opaque="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Wig-WN-Se5">
+                                                                        <rect key="frame" x="8" y="48" width="49" height="31"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <color key="onTintColor" red="0.52669697999999998" green="0.40229982139999998" blue="0.35759082440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <color key="thumbTintColor" red="0.69522255659999999" green="0.58923500780000004" blue="0.50607365370000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <connections>
+                                                                            <action selector="colorSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="O61-Tz-5Jk"/>
+                                                                        </connections>
+                                                                    </switch>
+                                                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="alU-mg-JKc">
+                                                                        <rect key="frame" x="81" y="48" width="205" height="30"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <color key="minimumTrackTintColor" systemColor="systemGreenColor"/>
+                                                                        <color key="thumbTintColor" systemColor="systemGreenColor"/>
+                                                                        <connections>
+                                                                            <action selector="changeCardBackgrounColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="R0g-fF-KBz"/>
+                                                                        </connections>
+                                                                    </slider>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sy0-jg-ULo">
+                                                                        <rect key="frame" x="292" y="48" width="74" height="31"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <fontDescription key="fontDescription" name="HanyiSentyPailouArch" family="HanyiSentyPailouArch" pointSize="20"/>
+                                                                        <color key="textColor" red="0.52669697999999998" green="0.40229982139999998" blue="0.35759082440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wod-Np-6c1">
+                                                                <rect key="frame" x="0.0" y="182" width="374" height="87"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="藍" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLw-XR-WKB">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="83" height="46"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <fontDescription key="fontDescription" name="HanyiSentyPailouArch" family="HanyiSentyPailouArch" pointSize="20"/>
+                                                                        <color key="textColor" red="0.52669697999999998" green="0.40229982139999998" blue="0.35759082440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <switch opaque="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FhL-1D-3H2">
+                                                                        <rect key="frame" x="8" y="48" width="49" height="31"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <color key="onTintColor" red="0.52669697999999998" green="0.40229982139999998" blue="0.35759082440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <color key="thumbTintColor" red="0.69522255659999999" green="0.58923500780000004" blue="0.50607365370000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <connections>
+                                                                            <action selector="colorSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="Jrp-j9-9Xg"/>
+                                                                        </connections>
+                                                                    </switch>
+                                                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="OzT-r5-MO9">
+                                                                        <rect key="frame" x="81" y="48" width="205" height="30"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <color key="minimumTrackTintColor" systemColor="systemBlueColor"/>
+                                                                        <color key="thumbTintColor" systemColor="systemBlueColor"/>
+                                                                        <connections>
+                                                                            <action selector="changeCardBackgrounColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="jfS-zm-D8n"/>
+                                                                        </connections>
+                                                                    </slider>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmN-tf-zU7">
+                                                                        <rect key="frame" x="292" y="48" width="74" height="31"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <fontDescription key="fontDescription" name="HanyiSentyPailouArch" family="HanyiSentyPailouArch" pointSize="20"/>
+                                                                        <color key="textColor" red="0.52669697999999998" green="0.40229982139999998" blue="0.35759082440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wtW-fg-PnB">
+                                                                <rect key="frame" x="0.0" y="277" width="374" height="87"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="透明" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oby-Z5-WQv">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="83" height="46"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <fontDescription key="fontDescription" name="HanyiSentyPailouArch" family="HanyiSentyPailouArch" pointSize="20"/>
+                                                                        <color key="textColor" red="0.52669697999999998" green="0.40229982139999998" blue="0.35759082440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <switch opaque="NO" tag="5" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wOb-Ul-7gh">
+                                                                        <rect key="frame" x="8" y="48" width="49" height="31"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <color key="onTintColor" red="0.52669697999999998" green="0.40229982139999998" blue="0.35759082440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <color key="thumbTintColor" red="0.69522255659999999" green="0.58923500780000004" blue="0.50607365370000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <connections>
+                                                                            <action selector="colorSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="Seo-8r-SlF"/>
+                                                                        </connections>
+                                                                    </switch>
+                                                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="LjX-L9-kgS">
+                                                                        <rect key="frame" x="81" y="48" width="205" height="30"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <color key="minimumTrackTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <color key="thumbTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <connections>
+                                                                            <action selector="changeCardBackgrounColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="9LL-V7-mCe"/>
+                                                                        </connections>
+                                                                    </slider>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XWw-4b-7qI">
+                                                                        <rect key="frame" x="292" y="48" width="74" height="31"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <fontDescription key="fontDescription" name="HanyiSentyPailouArch" family="HanyiSentyPailouArch" pointSize="20"/>
+                                                                        <color key="textColor" red="0.52669697999999998" green="0.40229982139999998" blue="0.35759082440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </view>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </view>
+                                                </subviews>
+                                                <viewLayoutGuide key="safeArea" id="T1n-Aj-o73"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                        </subviews>
+                                        <viewLayoutGuide key="contentLayoutGuide" id="m8D-0p-pKU"/>
+                                        <viewLayoutGuide key="frameLayoutGuide" id="vke-og-JEm"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
+                                                <size key="value" width="1122" height="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </scrollView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2OD-QS-1SU">
+                                <rect key="frame" x="20" y="485" width="374" height="377"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oue-3d-bIp">
+                                        <rect key="frame" x="47" y="28" width="280" height="320"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QMi-bi-tYs">
+                                <rect key="frame" x="20" y="446" width="374" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.69522255659999999" green="0.58923500780000004" blue="0.50607365370000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <segments>
+                                    <segment title="樣式字體"/>
+                                    <segment title="賀卡外觀"/>
+                                    <segment title="賀卡顏色"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" red="0.94255369899999997" green="0.90832370520000005" blue="0.86561614269999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="changeSetMode:" destination="BYZ-38-t0r" eventType="valueChanged" id="yOJ-UQ-am1"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="XmasCardView" destination="mjY-1G-J2y" id="kne-uL-aX0"/>
+                        <outlet property="XmasContentLabel" destination="aJJ-hK-lf1" id="hEL-8K-PW4"/>
+                        <outlet property="XmasTitleLabel" destination="Pby-xd-SI3" id="pHK-Lb-0tt"/>
+                        <outlet property="alphaLabel" destination="XWw-4b-7qI" id="cbF-Zs-J2J"/>
+                        <outlet property="alphaSlider" destination="LjX-L9-kgS" id="6hK-5G-cV5"/>
+                        <outlet property="birthdayCardView" destination="At6-L8-h3X" id="dQ0-t1-Ceb"/>
+                        <outlet property="birthdayContentLabel" destination="GvN-w8-8L5" id="IUc-AE-JXc"/>
+                        <outlet property="birthdayTitleLabel" destination="M0L-R1-zC8" id="roO-c1-lPY"/>
+                        <outlet property="blueLabel" destination="hmN-tf-zU7" id="zOY-gI-VvQ"/>
+                        <outlet property="blueSlider" destination="OzT-r5-MO9" id="vTN-80-FXH"/>
+                        <outlet property="borderwidthLabel" destination="K0i-dh-vXH" id="e8D-zI-GCV"/>
+                        <outlet property="borderwidthSlider" destination="eQb-Kp-5Pw" id="gze-pt-UAu"/>
+                        <outlet property="contentCountLabel" destination="Nsb-rL-WGd" id="sAw-1h-JHv"/>
+                        <outlet property="contentFontSizeLabel" destination="XlG-5d-cmU" id="wDK-7A-3yq"/>
+                        <outlet property="contentTextField" destination="qGi-fB-GsH" id="Haa-nt-D1m"/>
+                        <outlet property="cornerRadiusLabel" destination="wHs-U7-ZxP" id="HTu-Nt-fY8"/>
+                        <outlet property="cornerRadiusSlider" destination="gyL-kD-h8X" id="G4y-TI-d3f"/>
+                        <outlet property="greenLabel" destination="sy0-jg-ULo" id="qCj-5z-grp"/>
+                        <outlet property="greenSlider" destination="alU-mg-JKc" id="kI6-6h-8EJ"/>
+                        <outlet property="redLabel" destination="oeh-PZ-R4p" id="mhH-El-1XF"/>
+                        <outlet property="redSlider" destination="SlB-mq-DVN" id="SZB-5h-D3q"/>
+                        <outlet property="setModeScrollView" destination="CBq-2R-z4N" id="fun-2i-Cij"/>
+                        <outlet property="setModeSegmentedControl" destination="QMi-bi-tYs" id="7aC-s4-a5l"/>
+                        <outlet property="styleBackView" destination="oue-3d-bIp" id="ABv-0E-n8G"/>
+                        <outlet property="styleSegmentedControl" destination="hix-wu-8wS" id="G9z-xc-xlQ"/>
+                        <outlet property="titleCountLabel" destination="kdu-tQ-HK8" id="5U1-NV-eUY"/>
+                        <outlet property="titleFontSizeLabel" destination="SAq-6x-Sp1" id="oGb-gd-cQp"/>
+                        <outlet property="titleTextField" destination="JAC-iz-Nbf" id="sm1-cg-92N"/>
+                        <outlet property="valentineCardView" destination="hyF-r0-k5L" id="EXl-V3-eJw"/>
+                        <outlet property="valentineContentLabel" destination="aa9-wP-LKG" id="JFn-Ck-ve2"/>
+                        <outlet property="valentineTitleLabel" destination="9ux-4M-PEd" id="OEK-pv-YEE"/>
+                        <outletCollection property="sliderArray" destination="SlB-mq-DVN" collectionClass="NSMutableArray" id="9R4-N1-2kV"/>
+                        <outletCollection property="sliderArray" destination="a0S-GV-Isl" collectionClass="NSMutableArray" id="6p7-l6-WG0"/>
+                        <outletCollection property="switchArray" destination="BHH-PJ-5G6" collectionClass="NSMutableArray" id="hxY-9P-eex"/>
+                        <outletCollection property="switchArray" destination="FhL-1D-3H2" collectionClass="NSMutableArray" id="cbu-Ot-Iuc"/>
+                        <outletCollection property="switchArray" destination="Unq-zg-NGe" collectionClass="NSMutableArray" id="HRT-Sb-Zre"/>
+                        <outletCollection property="switchArray" destination="Wig-WN-Se5" collectionClass="NSMutableArray" id="WYY-hj-t9D"/>
+                        <outletCollection property="sliderArray" destination="eQb-Kp-5Pw" collectionClass="NSMutableArray" id="nCT-hf-BUp"/>
+                        <outletCollection property="sliderArray" destination="ckP-nj-Y1O" collectionClass="NSMutableArray" id="Hrn-cF-6mJ"/>
+                        <outletCollection property="textFiledArray" destination="JAC-iz-Nbf" collectionClass="NSMutableArray" id="WlE-8N-DZb"/>
+                        <outletCollection property="textFiledArray" destination="qGi-fB-GsH" collectionClass="NSMutableArray" id="BcX-hN-wmY"/>
+                        <outletCollection property="switchArray" destination="xut-GF-l2j" collectionClass="NSMutableArray" id="Elx-RO-8n5"/>
+                        <outletCollection property="sliderArray" destination="alU-mg-JKc" collectionClass="NSMutableArray" id="9jF-jl-Dd6"/>
+                        <outletCollection property="sliderArray" destination="gyL-kD-h8X" collectionClass="NSMutableArray" id="pRr-Sn-mDY"/>
+                        <outletCollection property="switchArray" destination="wOb-Ul-7gh" collectionClass="NSMutableArray" id="rkv-xD-bFp"/>
+                        <outletCollection property="sliderArray" destination="OzT-r5-MO9" collectionClass="NSMutableArray" id="mI9-hq-aWd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="At6-L8-h3X">
+                    <rect key="frame" x="0.0" y="0.0" width="280" height="320"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="birthdaycake" translatesAutoresizingMaskIntoConstraints="NO" id="Wyx-vX-98c">
+                            <rect key="frame" x="0.0" y="0.0" width="280" height="191"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0L-R1-zC8">
+                            <rect key="frame" x="16" y="199" width="248" height="46"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HanyiSentyPailouArch" family="HanyiSentyPailouArch" pointSize="25"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Content" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GvN-w8-8L5">
+                            <rect key="frame" x="16" y="254" width="248" height="46"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HanyiSentyPailouArch" family="HanyiSentyPailouArch" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="662-Hd-TC5"/>
+                    <color key="backgroundColor" systemColor="systemYellowColor"/>
+                </view>
+                <view contentMode="scaleToFill" id="mjY-1G-J2y">
+                    <rect key="frame" x="0.0" y="0.0" width="280" height="320"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="santaclaus" translatesAutoresizingMaskIntoConstraints="NO" id="r5s-yY-NO9">
+                            <rect key="frame" x="0.0" y="0.0" width="280" height="191"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pby-xd-SI3">
+                            <rect key="frame" x="16" y="199" width="248" height="46"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HanyiSentyPailouArch" family="HanyiSentyPailouArch" pointSize="25"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Content" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJJ-hK-lf1">
+                            <rect key="frame" x="16" y="254" width="248" height="46"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HanyiSentyPailouArch" family="HanyiSentyPailouArch" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="tnX-R1-ugT"/>
+                    <color key="backgroundColor" systemColor="systemRedColor"/>
+                </view>
+                <view contentMode="scaleToFill" id="hyF-r0-k5L">
+                    <rect key="frame" x="0.0" y="0.0" width="280" height="320"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="valentine" translatesAutoresizingMaskIntoConstraints="NO" id="mcy-N7-Ic2">
+                            <rect key="frame" x="0.0" y="0.0" width="280" height="191"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ux-4M-PEd">
+                            <rect key="frame" x="16" y="199" width="248" height="46"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HanyiSentyPailouArch" family="HanyiSentyPailouArch" pointSize="25"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Content" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aa9-wP-LKG">
+                            <rect key="frame" x="16" y="254" width="248" height="46"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HanyiSentyPailouArch" family="HanyiSentyPailouArch" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="xb8-u3-X5N"/>
+                    <color key="backgroundColor" systemColor="systemPinkColor"/>
+                </view>
+                <tapGestureRecognizer id="xSJ-La-jf8">
+                    <connections>
+                        <action selector="closeKeyboard:" destination="BYZ-38-t0r" id="n7i-WE-o5L"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="-23.188405797101453" y="53.571428571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="birthdaycake" width="750" height="750"/>
+        <image name="cork-339" width="624" height="624"/>
+        <image name="santaclaus" width="640" height="640"/>
+        <image name="valentine" width="750" height="650"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
